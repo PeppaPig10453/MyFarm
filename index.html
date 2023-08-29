@@ -21,7 +21,7 @@
             <div class="tabmenu current" param-value="a">农场</div>
             <div class="tabmenu" param-value="b">商场</div>
             <div class="tabmenu locked" param-value="c">屠宰场</div>
-            <div class="tabmenu undeved" param-value="d">加工场</div>
+            <div class="tabmenu locked" param-value="d">加工场</div>
             <div class="tabmenu" param-value="e">选项</div>
         </div>
         <div class="tab current" name="a">
@@ -56,10 +56,16 @@
                     <div class="sidebaritemname">猪肉</div>
                     <div class="sidebaritemvalue">0</div>
                 </div>
+                <br>
+                <div class="sidebaritem">
+                    <div class="sidebaritemname">烤乳猪</div>
+                    <div class="sidebaritemvalue">0</div>
+                </div>
             </div>
             <button class="buy button" item="饲料" param-value="Fooder">购买：饲料</button>
             <button class="sell button" item="猪" param-value="Pig">卖出：猪</button>
             <button class="sell button" item="猪肉" param-value="PigMeat">卖出：猪肉</button>
+            <button class="sell button" item="烤乳猪" param-value="KRPig">卖出：烤乳猪</button>
         </div>
         <div class="tab hide" name="c">
             <h3 class="smalltitle">屠宰场</h3>
@@ -71,6 +77,21 @@
                 </div>
             </div>
             <button class="kill button" item="猪->猪肉" param-value="PigToPigMeat">屠宰猪</button>
+        </div>
+        <div class="tab hide" name="d">
+            <h3 class="smalltitle">加工场</h3>
+            <div class="tabsidebar">
+                <h4 class="sidebarcontenttitle">食物</h4>
+                <hr>
+                <div class="sidebaritem">
+                    <div class="sidebaritemname">猪 -> 烤乳猪</div>
+                </div>
+                <div class="sidebaritem">
+                    <div class="sidebaritemname">猪肉 -> 烤乳猪</div>
+                </div>
+            </div>
+            <button class="process button" item="猪->烤乳猪" param-value="PigToKRPig">猪->烤乳猪</button>
+            <button class="process button" item="猪肉->烤乳猪" param-value="PigMeatToKRPig">猪肉->烤乳猪</button>
         </div>
     </body>
     <div class="tab hide" name="e">
