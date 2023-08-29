@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <title>农场放置</title>
+        <link rel="stylesheet" href="public_01.0.min.css">
+        <script src="game_01.0.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h2>农场放置</h2>
+        </header>
+        <div class="globalsidebar">
+            <div class="sidebarcontenttitle">物品</div>
+            <hr>
+            <div class="sidebaritem">
+                <div class="sidebaritemname">佩奇币</div>
+                <div class="sidebaritemvalue">100</div>
+            </div>
+        </div>
+        <div class="tabsmenu">
+            <div class="tabmenu current" param-value="a">农场</div>
+            <div class="tabmenu" param-value="b">商场</div>
+            <div class="tabmenu locked" param-value="c">屠宰场</div>
+            <div class="tabmenu undeved" param-value="d">加工场</div>
+            <div class="tabmenu" param-value="e">选项</div>
+        </div>
+        <div class="tab current" name="a">
+            <h3 class="smalltitle">农场</h3>
+            <div class="tabsidebar">
+                <h4 class="sidebarcontenttitle">动物</h4>
+                <hr>
+                <div class="sidebaritem">
+                    <div class="sidebaritemname">猪</div>
+                    <div class="sidebaritemvalue animalecount">0</div>
+                </div>
+            </div>
+            <button class="feed button" item="饲料" param-value="Fooder">喂食</button>
+        </div>
+        <div class="tab hide" name="b">
+            <h3 class="smalltitle">商场</h3>
+            <div class="tabsidebar">
+                <h4 class="sidebarcontenttitle">商品</h4>
+                <hr>
+                <div class="sidebaritem">
+                    <div class="sidebaritemname">饲料</div>
+                    <div class="sidebaritemvalue">￥ 10.0 / 份</div>
+                </div>
+            </div>
+            <button class="buy button" item="饲料" param-value="Fooder">购买：饲料</button>
+            <button class="sell button" item="猪" param-value="Pig">卖出：猪</button>
+            <button class="sell button" item="猪肉" param-value="PigMeat">卖出：猪肉</button>
+        </div>
+        <div class="tab hide" name="c">
+            <h3 class="smalltitle">屠宰场</h3>
+            <div class="tabsidebar">
+                <h4 class="sidebarcontenttitle">动物</h4>
+                <hr>
+                <div class="sidebaritem">
+                    <div class="sidebaritemname">猪 -> 猪肉</div>
+                </div>
+            </div>
+            <button class="kill button" item="猪->猪肉" param-value="PigToPigMeat">屠宰猪</button>
+        </div>
+    </body>
+    <div class="tab hide" name="e">
+        <button class="button" onclick="window.location.reload()">重置</button>
+    </div>
+</html>
